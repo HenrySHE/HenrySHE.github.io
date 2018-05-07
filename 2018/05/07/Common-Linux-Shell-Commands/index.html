@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="HKU student"><title>Common Linux Shell Commands | Henry SHE's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Common Linux Shell Commands</h1><a id="logo" href="/.">Henry SHE's Blog</a><p class="description">Welcome to my blog</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Common Linux Shell Commands</h1><div class="post-meta">May 7, 2018</div><div class="post-content"><p><a href="https://www.tecmint.com/useful-linux-commands-for-newbies/" target="_blank" rel="noopener">Reference Link</a><br>  *All knowledge are coming from this website.</p>
+<blockquote>
+<p>最近开始学习cloud computing这门课，然后老师给的Reference里有这个网站，方便查阅，便总结这个。</p>
+</blockquote>
+<h2 id="常用Command"><a href="#常用Command" class="headerlink" title="常用Command"></a>常用Command</h2><ol>
+<li><p><code>list</code>(list)</p>
+<ul>
+<li><code>list-a</code>: List things in long listing fashion</li>
+<li><code>ls-a</code>： List things including “hidden” files (就是以”.”开头的，都是Hidden的文件。）</li>
+</ul>
+</li>
+<li><p><code>lsblk</code> print block devices by their assigned name (but not RAM)</p>
+</li>
+<li><p><code>md5sum</code> (Compute and Check MD5 Message Digest)</p>
+</li>
+<li><p><code>dd</code>: Command “dd” stands for (Convert and Copy a file), Can be used to convert and copy a file and most of the times is used to copy an iso file (or any other file) to a USB device (or any other location), thus can be used to make a ‘Bootlable‘ USB Stick.</p>
+</li>
+<li><p><code>uname</code>(unix name),check all machine info.</p>
+</li>
+<li><p><code>history</code> stands for History (Event) Record, it prints the history of long list of executed commands in terminal.查看历史所有运行的记录，<code>sudo xxx/ sudo xxx/...</code></p>
+</li>
+<li><p><code>sudo</code>(super user do)</p>
+</li>
+<li><code>mkdir</code> making directory</li>
+<li><p><code>touch</code>:(Update the access and modification times of each FILE to the current time). touch command creates the file, only if it doesn’t exist. If the file already exists it will update the timestamp and not the contents of the file.（如果文件不存在，则创建文件，否则update the timestamp）</p>
+</li>
+<li><p><code>chmod</code> stands for <strong>(change file mode bits)</strong>. chmod changes the file mode (permission) of each given file, folder, script, etc.. according to mode asked for.<br><code>Read (r)=4
+Write(w)=2
+Execute(x)=1</code><br><code>rwxr-x--x   abc.sh</code><br>Here the root’s permission is rwx (read, write and execute).<br>usergroup to which it belongs, is r-x (read and execute only, no write permission) and for world is –x (only execute).<br><code>root@tecmint:~# chmod 777 abc.sh</code>  (provide read, write and execute permission to owner, group, and world.)<br><code>root@tecmint:~# chmod 666 abc.sh</code> (only read and write permission to all three.)<br><code>root@tecmint:~# chmod 711 abc.sh</code>(read, write and execute to owner and only execute to group and world.)</p>
+</li>
+<li><p><code>chown</code>: (change file owner and group). Every file belongs to a group of user and a owner. 在用<code>ls-l</code>的时候可以看到它的file owner /group，然后你可以更改成你想要的woner，或者group:<br><img src="http://upload-images.jianshu.io/upload_images/2481474-1f80ae1182f70c15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="owner and group.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-a8e0299d9c0c3ae7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="change the group.png"></p>
+</li>
+<li><p><code>apt</code>:  stands for (Advanced Package Tool). Apt is an advanced package manager for Debian based system (Ubuntu, Kubuntu, etc.)</p>
+</li>
+<li><p><code>tar</code>压缩，解压缩，都是这个。 可以参考：<a href="https://www.tecmint.com/18-tar-command-examples-in-linux/" target="_blank" rel="noopener">这个链接</a></p>
+<ul>
+<li>创建压缩文件 <code>tar -cvf tecmint-14-09-12.tar /home/tecmint/</code></li>
+<li>创建tar.gz文件 <code># tar cvzf MyImages-14-09-12.tar.gz /home/MyImages</code> 或者 <code>tar cvzf MyImages-14-09-12.tgz /home/MyImages</code></li>
+<li>解压<ul>
+<li>解压到当前文件： <code># tar -xvf public_html-14-09-12.tar</code></li>
+<li>解压到指定文件：<code># tar -xvf public_html-14-09-12.tar -C /home/public_html/videos/</code></li>
+</ul>
+</li>
+<li>列出所有文件：<code># tar -tvf uploadprogress.tar</code></li>
+<li>解压指定文件：<code># tar -xvf cleanfiles.sh.tar cleanfiles.sh</code>或者<code>tar --extract --file=cleanfiles.sh.tar cleanfiles.sh</code></li>
+</ul>
+</li>
+<li><p><code>cal</code>  “cal” (Calendar), it is used to displays calendar of the present month or any other month of any year that is advancing or passed. eg: <code>cal 02 1935</code> 就是打印1935年2月的calendar.</p>
+</li>
+<li><p><code>date</code>打印日期，更改日期<code>date --set=&#39;14 may 2013 13:57&#39;</code></p>
+</li>
+<li><p><code>cat</code>合并文件 “cat” stands for (Concatenation). Concatenate (join) two or more plain file and/or print contents of a file on standard output.</p>
+<ul>
+<li>创建文件：<code>cat &gt; file1</code>然后输入你想要输入的内容，结束之后，按下ctrl+D，回到命令行，然后文件就创建成功了。</li>
+<li>浏览文件，你同样可以用<code>cat file1</code></li>
+<li>合并文件,然后命名为新的文件 <code>cat file1 file2 &gt; newfile</code></li>
+</ul>
+</li>
+<li><p><code>cp</code> copy文件<code>cp /home/user/Downloads abc.tar.gz /home/user/Desktop (Return 0 when sucess)</code></p>
+</li>
+</ol>
+<p>18.<code>mv</code> 移动文件 <code>root@tecmint:~# mv /home/user/Downloads abc.tar.gz /home/user/Desktop (Return 0 when sucess)</code></p>
+<pre><code>* 重命名文件 `mv name1 name2`就可以重命名成功。
+</code></pre><ol start="19">
+<li><p><code>pwd</code> “pwd” (print working directory), prints the current working directory with full path name from terminal. <code>root@tecmint:~# pwd
+/home/user/Desktop</code></p>
+</li>
+<li><p><code>cd</code>,进入文件夹</p>
+</li>
+</ol>
+<hr>
+<h2 id="常用Command补充"><a href="#常用Command补充" class="headerlink" title="常用Command补充"></a>常用Command补充</h2><ol start="21">
+<li><p>删除文件<code>rm</code>，删除文件夹<code>rmdir</code></p>
+</li>
+<li><p>帮助文件：<code>man &lt;command&gt;</code>当你想查看某个命令是怎么使用的，你就打这个。</p>
+</li>
+<li><p><code>clear</code>，清空当前屏幕</p>
+</li>
+<li><p>粘贴（其实这么久了我都不知道如何快捷键粘贴），真正的粘贴是，<code>Ctrl+Shift+V</code>，或者你可以使用<code>shit+insert</code>，最笨的方法就是选择edit，paste。<br><img src="http://upload-images.jianshu.io/upload_images/2481474-ab1ef9c8becce03f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Command1.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-bba33df76a40e312.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="command2.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-f057e9d83c5977ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="command3.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-031ba7008a7958d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+</ol>
+<hr>
+<h2 id="补充二-输入与输出"><a href="#补充二-输入与输出" class="headerlink" title="补充二 输入与输出"></a>补充二 输入与输出</h2><ul>
+<li>输入&amp;输出： <code>stdin</code>和<code>stdout</code></li>
+<li>添加文本： (not overwritten): <code>echo xxx(你要添加的内容 &gt;&gt; (你的文件名)</code></li>
+<li>邮件附件用<code>&lt;</code><br><img src="http://upload-images.jianshu.io/upload_images/2481474-9658d5044aa11915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三种情况.png"></li>
+</ul>
+<ul>
+<li>使用者三个情况看系统解释：<br><em>`find . -name ‘my</em>‘ 2&gt; error.log<code>便可以存下这个error，然后名字就是error.log，最后就用</code>cat error.log`便可查看error的原因了。</li>
+<li>复杂情况：<br><img src="http://upload-images.jianshu.io/upload_images/2481474-e798f77d75a0a80a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="复杂情况.png"></li>
+</ul>
+<hr>
+<h2 id="补充三-Linux之间的沟通"><a href="#补充三-Linux之间的沟通" class="headerlink" title="补充三 Linux之间的沟通"></a>补充三 Linux之间的沟通</h2><ul>
+<li>Ping:<code>Ping &lt;ipaddress&gt;/&lt;www.xxx.com&gt;</code> ,ctrl + c 推出</li>
+<li><p>ftp: <code>ftp xx.xxx.xx.xx</code>,输入人账号密码之后就可进行文件传输<br><img src="http://upload-images.jianshu.io/upload_images/2481474-9fdff008494b3c50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FTP命令.png"></p>
+<ul>
+<li>进入ftp后，输入<code>dir</code>，然后输入 <code>passive</code>然后就 激活了，就可以正常使用<code>dir</code>命令。</li>
+<li>上传 <code>put xxx</code></li>
+</ul>
+</li>
+<li><p>Telnet:  和windows的远程桌面相似。</p>
+</li>
+<li>SSH：securely connect to a remote computer,比telnet更加安全；<ul>
+<li>需要 证书和Key，才能够访问（所以很安全），访问方式是：<code>SSH username@ip-address or hostname</code></li>
+<li>输入<code>exit</code>就可以退出SSH的连接。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Linux-Vi-编辑器"><a href="#Linux-Vi-编辑器" class="headerlink" title="Linux Vi 编辑器"></a>Linux Vi 编辑器</h3><blockquote>
+<p>Terminal，高效，简介，如果熟悉命令行操作，简直比GUI界面操作快上很多倍；缺点，需要花时间熟悉命令行。</p>
+<p>常见的VI编辑器： Vim, elvis,nvi,nano,vile<br>其实直接Terminal都可以用<code>vi &lt;文件名&gt;</code>去编辑文件</p>
+<ul>
+<li>输入模式(command mode)： ‘i’,然后开始输入东西，输入<code>ESC</code>就退出输入模式</li>
+<li>创建文件／编辑文件：<code>vi &lt;NewFileName&gt;/ vi &lt;existFileName&gt;</code><br><img src="http://upload-images.jianshu.io/upload_images/2481474-becf9f54cd141cb0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VI常用命令.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-4b1d4b3f3e163615.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VI常用命令2.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-da9ad395d24de128.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VI命令－指针移动.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-5d5c8c6f080245a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VI命令－保存／退出.png"></li>
+</ul>
+</blockquote>
+<p>文本编辑基本上是比较常用的，要很熟悉才行。</p>
+<hr>
+<p>##Linux Vitural Terminal</p>
+<blockquote>
+<p>多人访问一个服务器的时候，或者说你需要远程控制一台机器，就会涉及到这方面的知识。它的特点是<strong>你没办法使用鼠标</strong> Ubuntu系统下，<code>ctrl+alt+F1</code>,输入virtual box 用户名，密码。然后你就可以Login了。不同用户可以登录进去。</p>
+<ul>
+<li>常用快捷键：<code>Ctrl+Alt+F(1~6)</code>用户不同用户的切换，输入<code>tty</code>你可以查看你到底是哪个登录进去。<br><img src="http://upload-images.jianshu.io/upload_images/2481474-0002233a1387a526.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="常用命令1.png"><br><img src="http://upload-images.jianshu.io/upload_images/2481474-9144c0b587d862fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="常用命令2.png"></li>
+</ul>
+</blockquote>
+</div><div class="tags"><a href="/tags/Linux-Cloud-Computing/">Linux, Cloud Computing</a></div><div class="post-nav"><a class="next" href="/2018/05/07/Maven-Project-Creation-in-terminal/">Maven Project Creation(in terminal)</a></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Coding/" style="font-size: 15px;">Coding</a> <a href="/tags/Linux-Cloud-Computing/" style="font-size: 15px;">Linux, Cloud Computing</a> <a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Common-Linux-Shell-Commands/">Common Linux Shell Commands</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Maven-Project-Creation-in-terminal/">Maven Project Creation(in terminal)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Hive-Getting-data-from-HDFS/">Hive Getting data from HDFS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Visualization-Graphs/">Visualization Graphs</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Change-Theme-of-my-Blog/">Change Theme of my Blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/TestPost/">Test my Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.weibo.com/lilienthal" title="Weibo" target="_blank">Weibo</a><ul></ul><a href="https://www.jianshu.com/u/f979250185cd" title="Jianshu" target="_blank">Jianshu</a><ul></ul><a href="http://www.github.com/HenrySHE" title="GitHub" target="_blank">GitHub</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Henry SHE's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
