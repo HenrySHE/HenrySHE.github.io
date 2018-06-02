@@ -1,8 +1,7 @@
 <!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="HKU student"><title>Deep Learning Notes | Henry SHE's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Deep Learning Notes</h1><a id="logo" href="/.">Henry SHE's Blog</a><p class="description">Welcome to my blog</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Deep Learning Notes</h1><div class="post-meta">May 8, 2018</div><div class="post-content"><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-
-<p><img src="https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="Image From &quot;Pexels&quot;"></p>
+<h1 id="Deep-Leaning-Review"><a href="#Deep-Leaning-Review" class="headerlink" title="Deep Leaning Review"></a>Deep Leaning Review</h1><p><img src="https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="From &quot;Pexels&quot;"></p>
 <p><strong>Author:</strong> Henry SHE</p>
 <p>Date: 5/4/2018</p>
 <blockquote>
@@ -32,7 +31,21 @@
 <ol>
 <li>$$Error$$ (Mean-square Error and Half Mean-square Error)</li>
 </ol>
-<h4 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent:"></a>Gradient Descent:</h4><h4 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression:"></a>Logistic Regression:</h4><h4 id="SGD-Stochastic-Gradient-Descent"><a href="#SGD-Stochastic-Gradient-Descent" class="headerlink" title="SGD - Stochastic Gradient Descent"></a>SGD - Stochastic Gradient Descent</h4><h2 id="Neural-Networks-Perceptron"><a href="#Neural-Networks-Perceptron" class="headerlink" title="Neural Networks - Perceptron"></a>Neural Networks - Perceptron</h2><blockquote>
+<p>Data Sets:<br>$$<br>x=\begin{bmatrix}<br>x_{1} \<br>x_{2} \<br>x_{3} \<br>\vdots  \<br>x_{M}<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>\theta =\begin{bmatrix}<br>\theta _{0} &amp; \theta _{1} &amp; \theta _{2} &amp; \theta _{3} &amp; \ldots  &amp; \theta _{N}<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>X=\begin{bmatrix}<br>1 &amp; x_{1}, \<br>1 &amp; x_{2} \<br>1 &amp; x_{3} \<br>\vdots  &amp; \vdots \<br>1 &amp; x_{M}<br>\end{bmatrix}<br>$$</p>
+<h4 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent:"></a>Gradient Descent:</h4><p><strong>Important Parameters:</strong></p>
+<ul>
+<li>Learning Rate $\alpha$</li>
+<li>Cost Function $J(\theta)$<ul>
+<li>Y(That used to calculate the Cost) $y$</li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature Scaling / Mean Normalization:</strong><br>$$<br>x_{j}\leftarrow \dfrac {x_{j}-Mean_{j}} {Maxj-Minj}<br>$$</p>
+<h4 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression:"></a>Logistic Regression:</h4><p>Update Rules:<br>$$<br>\dfrac {\partial J\left( \theta \right) }{\partial \theta <em>{j}}=-\dfrac {1}{M}\sum ^{M}</em>{i=1}\left( y_{i}-h\left( x_{i}\right) \right) x^{(j)}_{i}<br>$$</p>
+<p>Update theta:<br>$$<br>\theta_{j} \leftarrow \theta_{j}-\alpha\dfrac {\partial J\left( \theta \right) }{\partial \theta _{j}}<br>$$</p>
+<h4 id="SGD-Stochastic-Gradient-Descent"><a href="#SGD-Stochastic-Gradient-Descent" class="headerlink" title="SGD - Stochastic Gradient Descent"></a>SGD - Stochastic Gradient Descent</h4><h2 id="Neural-Networks-Perceptron"><a href="#Neural-Networks-Perceptron" class="headerlink" title="Neural Networks - Perceptron"></a>Neural Networks - Perceptron</h2><blockquote>
 <p>Simulate human’s perceptron</p>
 </blockquote>
 <h3 id="Basic-Process-important"><a href="#Basic-Process-important" class="headerlink" title="Basic Process: (important)"></a>Basic Process: (important)</h3><ol>
@@ -72,4 +85,80 @@
 <p>$$\frac{\partial z}{\partial s} = (\frac{\partial z}{\partial x}\cdot \frac{\partial x}{\partial s})+(\frac{\partial z}{\partial y}\cdot \frac{\partial y}{\partial s})$$</p>
 <p>We need to use “chain rule” to calculate the divertive of some function, then do the backpropagation and update those weights</p>
 </blockquote>
-<h2 id="Training-the-Neural-Networks"><a href="#Training-the-Neural-Networks" class="headerlink" title="Training the Neural Networks"></a>Training the Neural Networks</h2><h2 id="RNN-Recurrent-Neural-Network"><a href="#RNN-Recurrent-Neural-Network" class="headerlink" title="RNN - Recurrent Neural Network"></a>RNN - Recurrent Neural Network</h2><h2 id="Machine-Translation"><a href="#Machine-Translation" class="headerlink" title="Machine Translation"></a>Machine Translation</h2><h2 id="CNN-Convolutional-Neural-Network"><a href="#CNN-Convolutional-Neural-Network" class="headerlink" title="CNN - Convolutional Neural Network"></a>CNN - Convolutional Neural Network</h2><h2 id="Other-Topic-RL-Reinforcement-Learning"><a href="#Other-Topic-RL-Reinforcement-Learning" class="headerlink" title="Other Topic - RL (Reinforcement Learning)"></a>Other Topic - RL (Reinforcement Learning)</h2></div><div class="tags"><a href="/tags/Deep-Learning/">Deep Learning</a></div><div class="post-nav"><a class="pre" href="/2018/06/02/TuShare-Testing/">TuShare Testing</a><a class="next" href="/2018/05/07/Common-Linux-Shell-Commands/">Common Linux Shell Commands</a></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/Coding/" style="font-size: 15px;">Coding</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Deep-Learning/" style="font-size: 15px;">Deep Learning</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/TuShare-Testing/">TuShare Testing</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/08/Deep-Learning-Notes/">Deep Learning Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Common-Linux-Shell-Commands/">Common Linux Shell Commands</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Maven-Project-Creation-in-terminal/">Maven Project Creation(in terminal)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Hive-Getting-data-from-HDFS/">Hive Getting data from HDFS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Visualization-Graphs/">Visualization Graphs</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Change-Theme-of-my-Blog/">Change Theme of my Blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/TestPost/">Test my Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.weibo.com/lilienthal" title="Weibo" target="_blank">Weibo</a><ul></ul><a href="https://www.jianshu.com/u/f979250185cd" title="Jianshu" target="_blank">Jianshu</a><ul></ul><a href="http://www.github.com/HenrySHE" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="http://henryshe.cn" title="Personal Web Page" target="_blank">Personal Web Page</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Henry SHE's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<h2 id="Training-the-Neural-Networks"><a href="#Training-the-Neural-Networks" class="headerlink" title="Training the Neural Networks"></a>Training the Neural Networks</h2><p>$$<br>\dfrac {\partial x}{\partial y}=\dfrac {\partial y}{\partial x}\sum ^{\infty }<em>{i}\left( x</em>{i}+y_{i}\right)<br>$$</p>
+<h3 id="Output-performance"><a href="#Output-performance" class="headerlink" title="Output performance:"></a>Output performance:</h3><ul>
+<li><p>Learning Rate Problem $\alpha$</p>
+<ul>
+<li>Too Large: Overshooting, can’t not have convergence</li>
+<li>Too Small: Trapped in local minimum, need more iterations</li>
+</ul>
+</li>
+<li><p>Under fitting (<strong>High bias $b$</strong> ), Solutions:</p>
+<ul>
+<li>Add more features</li>
+<li>Decrease $\lambda$ (Fix “<strong>High bias</strong>“ problem)</li>
+</ul>
+</li>
+<li><p>Over fitting (<strong>Higher Variance,Large Weight $\theta$</strong>), Solutions:</p>
+<ul>
+<li><p>Get more training data (# of features &gt; training data size)</p>
+</li>
+<li><p>Fewer features</p>
+</li>
+<li><p>Increase $\lambda$</p>
+</li>
+<li><p>Drop out (Randomly drop 5% points)</p>
+</li>
+<li><p>Early Stop</p>
+<ul>
+<li>Cross Validation (use your testing data, to evaluate the neural network, and stop before it getting worse.)</li>
+</ul>
+</li>
+<li><p>Weight Regularization</p>
+<ul>
+<li>L1 Regularization</li>
+</ul>
+<p>$$<br>\dfrac {1}{M}\Sigma <em>{i}J\left( h</em>{\theta }\left( x_{i}\right) ,y_{i}\right) +\lambda \Sigma _{j}\left( \theta _{i}\right)<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- L2 Regularization
+
+$$
+\dfrac {1}{M}\Sigma _{i}J\left( h_{\theta }\left( x_{i}\right) ,y_{i}\right) +\lambda \Sigma _{j}\left( \theta _{i}\right)^{2}
+$$
+</code></pre><ul>
+<li><p>Improvement of your Neural Network</p>
+<ul>
+<li>Get more training data</li>
+<li>Invent more data (data argumentation)</li>
+<li>Rescale your data(Activation function)</li>
+<li>Transform the data<ul>
+<li>Apply “log” or sth that can normalize the data</li>
+</ul>
+</li>
+<li>Feature Selection</li>
+</ul>
+</li>
+<li><p>Gradient Vanishing (Often occur in RNN)</p>
+<ul>
+<li><p>If we have Sigmoid function as Activation function, then the largest value of (sigmoid)’ will be 0.25 at most, then when we do the back propagation, especially with many hidden layer, some layer can’t not be updated efficiently.</p>
+</li>
+<li><p>Solutions:</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Gradient Exploding</p>
+<ul>
+<li>Re-Design the model of your network</li>
+<li>Use ReLU as activation function</li>
+<li>Use LSTM/GRU network</li>
+<li>Gradient Pruning (set a threshold)</li>
+</ul>
+</li>
+</ul>
+<h2 id="RNN-Recurrent-Neural-Network"><a href="#RNN-Recurrent-Neural-Network" class="headerlink" title="RNN - Recurrent Neural Network"></a>RNN - Recurrent Neural Network</h2><p>$$<br>\dfrac {\partial J}{\partial W}=\sum\dfrac {\partial Jt}{\partial W}<br>$$</p>
+<h2 id="Machine-Translation"><a href="#Machine-Translation" class="headerlink" title="Machine Translation"></a>Machine Translation</h2><h2 id="CNN-Convolutional-Neural-Network"><a href="#CNN-Convolutional-Neural-Network" class="headerlink" title="CNN - Convolutional Neural Network"></a>CNN - Convolutional Neural Network</h2><h2 id="Other-Topic-RL-Reinforcement-Learning"><a href="#Other-Topic-RL-Reinforcement-Learning" class="headerlink" title="Other Topic - RL (Reinforcement Learning)"></a>Other Topic - RL (Reinforcement Learning)</h2></div><div class="tags"><a href="/tags/Deep-Learning/">Deep Learning</a></div><div class="post-nav"><a class="pre" href="/2018/06/02/TuShare-Testing/">TuShare Testing</a><a class="next" href="/2018/05/07/Common-Linux-Shell-Commands/">Common Linux Shell Commands</a></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Deep-Learning/" style="font-size: 15px;">Deep Learning</a> <a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Coding/" style="font-size: 15px;">Coding</a> <a href="/tags/python/" style="font-size: 15px;">python</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/TuShare-Testing/">TuShare Testing</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/08/Deep-Learning-Notes/">Deep Learning Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Common-Linux-Shell-Commands/">Common Linux Shell Commands</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Maven-Project-Creation-in-terminal/">Maven Project Creation(in terminal)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/Hive-Getting-data-from-HDFS/">Hive Getting data from HDFS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Visualization-Graphs/">Visualization Graphs</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/Change-Theme-of-my-Blog/">Change Theme of my Blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/TestPost/">Test my Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.weibo.com/lilienthal" title="Weibo" target="_blank">Weibo</a><ul></ul><a href="https://www.jianshu.com/u/f979250185cd" title="Jianshu" target="_blank">Jianshu</a><ul></ul><a href="http://www.github.com/HenrySHE" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="http://henryshe.cn" title="Personal Web Page" target="_blank">Personal Web Page</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Henry SHE's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
